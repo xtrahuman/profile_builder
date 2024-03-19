@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.cdnfonts.com/css/apercu-pro");
+
+body {
+  background-color: #fff;
+}
+
+.all-texts {
+  font-family: "Apercu Pro", sans-serif;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.bg-list {
+  border-radius: 39px;
+  box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.07);
+  opacity: 1;
+  background-image: linear-gradient(
+    90deg,
+    rgba(50, 50, 50, 1) 0%,
+    rgba(13, 13, 13, 1) 100%
+  );
+}
+
+.media-list {
+  border-radius: 39px;
+  box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.07);
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.oval-ball-orangecolor {
+  background-color: rgba(255, 64, 0, 1);
+}
+
+.media-mxtape {
+  border-radius: 20px;
+  background-color: rgba(255, 64, 0, 1);
+}
+
+
+.artist-title {
+  border-radius: 10px;
+  background-color: rgba(255, 101, 49, 1);
+  color: #FFC6B2;
+}
