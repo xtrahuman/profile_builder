@@ -4,7 +4,7 @@
 @import url("https://fonts.cdnfonts.com/css/apercu-pro");
 
 body {
-  background-color: #fff;
+  background-color: #000;
 }
 
 .all-texts {
@@ -32,8 +32,15 @@ body {
   background-color: rgba(0, 0, 0, 1);
 }
 
-.oval-ball-orangecolor {
+.darkorangecolor {
   background-color: rgba(255, 64, 0, 1);
+}
+
+.lightorangecolor {
+  background-color: #FF8600;
+}
+.blocoredcolor {
+  background-color: #FF0000;
 }
 
 .media-mxtape {
@@ -41,9 +48,27 @@ body {
   background-color: rgba(255, 64, 0, 1);
 }
 
-
-.artist-title {
+.feature-title {
   border-radius: 10px;
   background-color: rgba(255, 101, 49, 1);
-  color: #FFC6B2;
+  color: #ffc6b2;
 }
+
+.footer-card {
+  border-radius: 39px;
+  border: 1px solid #4B4A4B;
+  box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.07);
+  opacity: 1;
+  background-color: #565656;
+}
+
+.footer-p {
+  font-weight: 400;
+  font-style: Regular;
+  letter-spacing: 2px;
+  text-align: left;
+  line-height: 11px;
+  font-size: 11px;
+}
+
+
