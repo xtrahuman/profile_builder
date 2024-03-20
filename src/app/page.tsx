@@ -13,7 +13,7 @@ import { FaWhatsapp } from "react-icons/fa";
 export default function Home() {
   interface MediaIcon {
     id: number;
-    icon: ReactElement; // This should be the type for React elements
+    icon: ReactElement; 
   }
 
   const mediaIcons: MediaIcon[] = [
@@ -49,18 +49,20 @@ export default function Home() {
 
   return (
     <main className="all-texts background-blur flex flex-col w-full h-full items-center justify-center">
-      <div className="bg-[#1D1D1D] flex justify-center lg:w-1/2 md:w-3/4 w-full my-[78px] rounded-3xl">
+      <div className="bg-[#1D1D1D] flex justify-center lg:w-1/2 md:w-3/4 w-full md:my-[60px] mt-0 mb-10 sm:rounded-3xl">
         <div className="flex items-center w-[68%] flex-col ">
-          <div className="mt-[63px] ">
+          <div className="md:mt-[63px] mt-[40px] relative md:h-[108px] md:w-[228px] sm:h-[90px] sm:w-[180px]  h-[75px] w-[150px]">
             <Image
+              className="h-fit w-full"
               src="/images/DayDay-Logo2.png"
-              width={200}
-              height={100}
+              width={228}
+              height={108}
               alt="daydaylogo"
+              layout="responsive"
             />
           </div>
 
-          <div className="bg-white w-full mt-10 mb-[42px] relative rounded-3xl">
+          <div className="bg-white w-full mt-10 sm:mb-[42px] mb-8 relative rounded-3xl">
             <Image
               className="w-full rounded-3xl h-fit"
               src="/images/profileImage.png"
@@ -71,11 +73,11 @@ export default function Home() {
             />
           </div>
 
-          <ul className="flex gap-2 mb-7">
+          <ul className="flex sm:gap-2 gap-1 mb-7">
             {mediaIcons.map(({ id, icon }) => (
               <li
                 key={id}
-                className="rounded-full bg-[#3E3E3E] text-2xl w-9 h-9 flex justify-center items-center"
+                className="rounded-full bg-[#3E3E3E] sm:text-2xl text-lg sm:w-9 w-7 sm:h-9 h-7 flex justify-center items-center"
               >
                 {icon}
               </li>
@@ -83,7 +85,7 @@ export default function Home() {
           </ul>
 
           <ActivityList
-            customStyle={{color:"darkorangecolor"}}
+            customStyle={{ color: "darkorangecolor" }}
             content="Award winning DJ & Radio Presenter"
           />
 
@@ -102,10 +104,10 @@ export default function Home() {
             />
           </div>
           <ActivityList
-            customStyle={{color:"lightorangecolor"}}
+            customStyle={{ color: "lightorangecolor" }}
             content="NEW MIX LIVE - TAKE A LISTEN"
           />
-          <div className="media-mxtape mb-9 flex gap-4 mt-[41px] px-5 py-4">
+          <div className="media-mxtape mb-9 w-full flex sm:gap-4 gap-2 mt-[41px] sm:px-5 sm:py-4 p-3">
             <div className="">
               <Image
                 className="rounded-3xl"
@@ -117,21 +119,26 @@ export default function Home() {
             </div>
             <div className="flex flex-col w-[65%] gap-y-2">
               <div className="flex justify-between">
-                <h3 className="feature-title w-fit px-2 py-1 text-sm">
+                <h3 className="feature-title w-fit px-2 py-1 sm:text-sm text-xs">
                   Dj Day Day
                 </h3>
-                <PiSoundcloudLogoFill className="text-3xl" />
+                <PiSoundcloudLogoFill className="sm:text-3xl text-xl" />
               </div>
 
-              <h2 className="music-title">
-                @DJDAYDAY_ / The Vibe Mixtape Vol 6 (R&B, Hip Hop, Bashment,
-                Afro Beats + UK Rap)
-              </h2>
-              <p className="text-[#FFC6B2] text-sm">19 hours ago</p>
+              <div className="flex flex-col h-full lg:w-[90%] justify-between">
+                <h2 className="music-title crop-text sm:text-base text-sm">
+                  @DJDAYDAY_ / The Vibe Mixtape Vol 6 (R&B, Hip Hop, Bashment,
+                  Afro Beats + UK Rap)
+                </h2>
+                <p className="text-[#FFC6B2]  text-sm">19 hours ago</p>
+              </div>
             </div>
           </div>
 
-          <ActivityList customStyle={{color:"blocoredcolor"}} content="YOUTUBE SHORTS" />
+          <ActivityList
+            customStyle={{ color: "blocoredcolor" }}
+            content="YOUTUBE SHORTS"
+          />
 
           <div className="flex justify-center relative my-11 gap-5 w-full">
             <Image
@@ -155,7 +162,10 @@ export default function Home() {
             </div>
           </div>
 
-          <ActivityList customStyle={{color:'whitecolor',}} content="LATEST EVENT" />
+          <ActivityList
+            customStyle={{ color: "whitecolor" }}
+            content="LATEST EVENT"
+          />
 
           <div className="w-full mt-10 relative mb-[77px] rounded-md">
             <Image
@@ -166,16 +176,16 @@ export default function Home() {
               height={458}
               layout="responsive"
             />
-            <p className="absolute top-5 left-7 text-[13px] text-black bg-white font-bold p-2 rounded-md">
+            <p className="absolute apercu-bold sm:top-5 sm:left-7 top-4 left-6 sm:text-[13px] text-[11px] text-black bg-white font-bold p-2 rounded-md">
               FRI 29TH MAR
             </p>
-            <div className="transparent-white flex flex-col text-black w-[92%] gap-y-7 px-4 py-3 left-1/2 translate-x-[-50%] rounded-md absolute bottom-5">
-              <p className="tracking-[0.6px] text-xl font-semibold">
+            <div className="transparent-white flex flex-col text-black w-[92%] sm:gap-y-7 gap-y-4 sm:px-4 px-3 sm:py-3 py-2 left-1/2 translate-x-[-50%] rounded-md absolute bottom-5">
+              <p className="tracking-[0.6px] sm:text-xl text-base font-semibold">
                 30 Years Of Day Day + Donae'O Live! Friday 29th March…
               </p>
               <div className="flex justify-between">
-                <p className="uppercase tracking-[1.15px]">XOYO Birmingham</p>{" "}
-                <span className="font-normal">FROM £25.00</span>
+                <p className="uppercase apercu-bold tracking-[1.15px] sm:text-base text-[11px]">XOYO Birmingham</p>{" "}
+                <span className="font-normal apercu-regular sm:text-base text-[11px]">FROM £25.00</span>
               </div>
             </div>
           </div>
@@ -183,17 +193,18 @@ export default function Home() {
       </div>
 
       <footer className="flex flex-col items-center">
-        <div className="footer-card flex items-center gap-x-5 px-3 py-4">
-          <div className="bg-black w-[50px] opacity-100 h-[50px] flex items-center justify-center  rounded-full">
-            <Image src="/images/Shape.PNG" alt="blogo" width={20} height={15} />
+        <div className="footer-card flex items-center sm:gap-x-5 gap-x-3 px-3 sm:py-4 py-3">
+          <div className="bg-black sm:w-[50px] w-[45px] sm:h-[50px] h-[45px]  opacity-100  flex items-center justify-center  rounded-full">
+            <Image className="sm:block hidden"  src="/images/Shape.PNG" alt="blogo" width={20} height={15} />
+            <Image className="sm:hidden block" src="/images/Shape.PNG" alt="blogo" width={18} height={12} />
           </div>
-          <h4 className="font-bold text-[#fff] tracking-widest uppercase text-white opacity-100 pr-4">
+          <h4 className="font-bold apercu-bold text-[#fff] sm:text-base text-sm sm:tracking-widest tracking-wider uppercase text-white opacity-100 sm:pr-4 pr-3">
             Create a BLOCO.me
           </h4>
         </div>
         <div className="flex gap-x-2 items-center my-12">
           <p className="font-normal footer-p">POWERED BY</p>
-          <Image src="/images/bloco.PNG" alt="bloco" width={80} height={30} />
+          <Image src="/images/bloco.PNG" alt="bloco" width={65} height={20} />
         </div>
       </footer>
     </main>
@@ -211,7 +222,9 @@ const ActivityList = ({ customStyle, content }: ActivityListProps) => {
       <div
         className={`${customStyle.color} w-[11px] top-1/2 translate-y-[-50%] left-3.5 rounded-full h-[11px] absolute`}
       ></div>
-      <p className="p-2">{content}</p>
+      <p className="p-2 md:text-base sm:text-sm text-xs sm:ml-0 ml-5">
+        {content}
+      </p>
     </div>
   );
 };
@@ -224,14 +237,25 @@ interface MediacardProps {
 const Mediacard = ({ imageName, content }: MediacardProps) => {
   return (
     <div className="media-list relative w-full text-center relative flex justify-center">
-      <Image
-        className="absolute left-2 top-1/2 translate-y-[-50%] rounded-full"
-        src={`/images/${imageName}`}
-        alt="blogo"
-        width={55}
-        height={55}
-      />
-      <p className="py-6">{content}</p>
+      <div className="sm:w-[55px] sm:h-[55px] w-[40px] h-[40px] left-2 top-1/2 rounded-full translate-y-[-50%] absolute bg-black">
+        <Image
+          className="sm:block hidden left-0 top-1/2 rounded-full translate-y-[-50%] absolute"
+          src={`/images/${imageName}`}
+          alt="blogo"
+          width={55}
+          height={55}
+        />
+        <Image
+          className="sm:hidden block left-0 top-1/2 rounded-full translate-y-[-50%] absolute" 
+          src={`/images/${imageName}`}
+          alt="blogo"
+          width={40}
+          height={40}
+        />
+      </div>
+      <p className="sm:py-6 py-5 md:text-base sm:text-sm text-xs sm:ml-0 ml-5">
+        {content}
+      </p>
     </div>
   );
 };
