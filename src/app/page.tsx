@@ -9,6 +9,8 @@ import { ReactElement } from "react";
 import { FaTiktok } from "react-icons/fa";
 import { FaSnapchatGhost } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
+import ActivityList from "@/components/activityList";
+import Mediacard from "@/components/mediaCard";
 
 export default function Home() {
   interface MediaIcon {
@@ -147,7 +149,6 @@ export default function Home() {
               alt="ytshort1"
               width={210}
               height={355}
-              // layout="responsive"
             />
             <Image
               className="rounded-xl w-[46%]"
@@ -155,7 +156,6 @@ export default function Home() {
               alt="ytshort1"
               width={210}
               height={355}
-              // layout="responsive"
             />
             <div className="w-12 h-12 rounded-full cursor-pointer flex justify-center items-center bg-black absolute right-[-22px] top-1/2 translate-y-[-50%]">
               <HiArrowRight className="text-2xl" />
@@ -181,7 +181,7 @@ export default function Home() {
             </p>
             <div className="transparent-white flex flex-col text-black w-[92%] sm:gap-y-7 gap-y-4 sm:px-4 px-3 sm:py-3 py-2 left-1/2 translate-x-[-50%] rounded-md absolute bottom-5">
               <p className="tracking-[0.6px] sm:text-xl text-base font-semibold">
-                30 Years Of Day Day + Donae'O Live! Friday 29th March…
+                30 Years Of Day Day + Donae&apos;O Live! Friday 29th March…
               </p>
               <div className="flex justify-between">
                 <p className="uppercase apercu-bold tracking-[1.15px] sm:text-base text-[11px]">XOYO Birmingham</p>{" "}
@@ -210,52 +210,3 @@ export default function Home() {
     </main>
   );
 }
-
-interface ActivityListProps {
-  customStyle: React.CSSProperties;
-  content: string;
-}
-
-const ActivityList = ({ customStyle, content }: ActivityListProps) => {
-  return (
-    <div className="bg-list w-full flex text-center justify-center relative">
-      <div
-        className={`${customStyle.color} w-[11px] top-1/2 translate-y-[-50%] left-3.5 rounded-full h-[11px] absolute`}
-      ></div>
-      <p className="p-2 md:text-base sm:text-sm text-xs sm:ml-0 ml-5">
-        {content}
-      </p>
-    </div>
-  );
-};
-
-interface MediacardProps {
-  imageName: string;
-  content: string;
-}
-
-const Mediacard = ({ imageName, content }: MediacardProps) => {
-  return (
-    <div className="media-list relative w-full text-center relative flex justify-center">
-      <div className="sm:w-[55px] sm:h-[55px] w-[40px] h-[40px] left-2 top-1/2 rounded-full translate-y-[-50%] absolute bg-black">
-        <Image
-          className="sm:block hidden left-0 top-1/2 rounded-full translate-y-[-50%] absolute"
-          src={`/images/${imageName}`}
-          alt="blogo"
-          width={55}
-          height={55}
-        />
-        <Image
-          className="sm:hidden block left-0 top-1/2 rounded-full translate-y-[-50%] absolute" 
-          src={`/images/${imageName}`}
-          alt="blogo"
-          width={40}
-          height={40}
-        />
-      </div>
-      <p className="sm:py-6 py-5 md:text-base sm:text-sm text-xs sm:ml-0 ml-5">
-        {content}
-      </p>
-    </div>
-  );
-};
