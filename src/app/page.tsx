@@ -13,12 +13,12 @@ import ActivityList from "@/components/activityList";
 import Mediacard from "@/components/mediaCard";
 
 export default function Home() {
-  interface MediaIcon {
+  interface SocialMediaIcon {
     id: number;
-    icon: ReactElement; 
+    icon: ReactElement;
   }
 
-  const mediaIcons: MediaIcon[] = [
+  const socialMediaIcons: SocialMediaIcon[] = [
     {
       id: 1,
       icon: <RiFacebookFill />,
@@ -49,6 +49,30 @@ export default function Home() {
     },
   ];
 
+  interface MediaCardContent {
+    id: number;
+    imageName: string;
+    content: string;
+  }
+
+  const MediaCardContents: MediaCardContent[] = [
+    {
+      id: 7,
+      imageName: "1XTRA-image.png",
+      content: "BBC 1XTRA Radio Shows",
+    },
+    {
+      id: 8,
+      imageName: "YoutubeImageProfile.png",
+      content: "DJ DAY DAY Youtube Channel",
+    },
+    {
+      id: 9,
+      imageName: "MerchandiseShop.png",
+      content: "DJ DAY DAY Mechandise",
+    },
+  ];
+
   return (
     <main className="all-texts background-blur flex flex-col w-full h-full items-center justify-center">
       <div className="bg-[#1D1D1D] flex justify-center lg:w-1/2 md:w-3/4 w-full md:my-[60px] mt-0 mb-10 sm:rounded-3xl">
@@ -76,7 +100,7 @@ export default function Home() {
           </div>
 
           <ul className="flex sm:gap-2 gap-1 mb-7">
-            {mediaIcons.map(({ id, icon }) => (
+            {socialMediaIcons.map(({ id, icon }) => (
               <li
                 key={id}
                 className="rounded-full bg-[#3E3E3E] sm:text-2xl text-lg sm:w-9 w-7 sm:h-9 h-7 flex justify-center items-center"
@@ -92,18 +116,9 @@ export default function Home() {
           />
 
           <div className="mt-[34px] mb-11 flex flex-col w-full gap-5">
-            <Mediacard
-              imageName="1XTRA-image.png"
-              content="BBC 1XTRA Radio Shows"
-            />
-            <Mediacard
-              imageName="YoutubeImageProfile.png"
-              content="DJ DAY DAY Youtube Channel"
-            />
-            <Mediacard
-              imageName="MerchandiseShop.png"
-              content="DJ DAY DAY Mechandise"
-            />
+            {MediaCardContents.map(({ id, imageName, content }) => (
+              <Mediacard key={id} imageName={imageName} content={content} />
+            ))}
           </div>
           <ActivityList
             customStyle={{ color: "lightorangecolor" }}
@@ -184,8 +199,12 @@ export default function Home() {
                 30 Years Of Day Day + Donae&apos;O Live! Friday 29th March…
               </p>
               <div className="flex justify-between">
-                <p className="uppercase apercu-bold tracking-[1.15px] sm:text-base text-[11px]">XOYO Birmingham</p>{" "}
-                <span className="font-normal apercu-regular sm:text-base text-[11px]">FROM £25.00</span>
+                <p className="uppercase apercu-bold tracking-[1.15px] sm:text-base text-[11px]">
+                  XOYO Birmingham
+                </p>{" "}
+                <span className="font-normal apercu-regular sm:text-base text-[11px]">
+                  FROM £25.00
+                </span>
               </div>
             </div>
           </div>
@@ -195,8 +214,20 @@ export default function Home() {
       <footer className="flex flex-col items-center">
         <div className="footer-card flex items-center sm:gap-x-5 gap-x-3 px-3 sm:py-4 py-3">
           <div className="bg-black sm:w-[50px] w-[45px] sm:h-[50px] h-[45px]  opacity-100  flex items-center justify-center  rounded-full">
-            <Image className="sm:block hidden"  src="/images/Shape.PNG" alt="blogo" width={20} height={15} />
-            <Image className="sm:hidden block" src="/images/Shape.PNG" alt="blogo" width={18} height={12} />
+            <Image
+              className="sm:block hidden"
+              src="/images/Shape.PNG"
+              alt="blogo"
+              width={20}
+              height={15}
+            />
+            <Image
+              className="sm:hidden block"
+              src="/images/Shape.PNG"
+              alt="blogo"
+              width={18}
+              height={12}
+            />
           </div>
           <h4 className="font-bold apercu-bold text-[#fff] sm:text-base text-sm sm:tracking-widest tracking-wider uppercase text-white opacity-100 sm:pr-4 pr-3">
             Create a BLOCO.me
