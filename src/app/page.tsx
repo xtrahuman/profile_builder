@@ -127,7 +127,7 @@ export default function Home() {
           <div className="media-mxtape mb-9 w-full flex sm:gap-4 gap-2 mt-[41px] sm:px-5 sm:py-4 p-3">
             <div className="">
               <Image
-                className="rounded-3xl"
+                className="sm:rounded-3xl rounded-xl"
                 src="/images/artworks.png"
                 alt="blogo"
                 width={150}
