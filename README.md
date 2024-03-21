@@ -17,7 +17,7 @@ Link to deployed webpage can be found [here](https://artistprofilemediabeast.net
 
 ## Getting Started
 
-1. Install NPM packages for backend
+1. Install NPM packages for project
 
    ```sh
    npm install
